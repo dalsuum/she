@@ -1,0 +1,262 @@
+body {
+    background-image: linear-gradient(#f767a3, rgb(218, 136, 238));
+    color: #555;
+    font-size: 16px;
+    margin: 0;
+}
+
+.container {
+    width: 80%;
+    margin:auto;
+    overflow: hidden;
+    
+}
+
+button {
+    background-color: rgb(250, 166, 212);
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 15px;
+    margin: 2px;
+}
+
+button:hover {
+    background-color: rgb(245, 112, 185);
+    color:black;
+}
+
+#clear {
+    clear: both;
+}
+
+header h1 {
+   color: #fff;
+}
+
+header h1:hover {
+    color: black;
+}
+
+nav {
+    background-image: linear-gradient(to left, #f5277d, #ffa7da);
+    color: #fff;
+}
+
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    float: right;
+
+
+}
+
+nav li {
+    display: inline; 
+    
+}
+
+nav li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    padding-right: 15px;
+}
+
+nav li a:hover {
+    color: rgb(0, 0, 0);
+}
+
+.showCase {
+    background-image: url(./img/gallary1/img\ \(12\).jpg);
+    background-position: center left ;
+    
+
+    min-height: 300px ;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.showCase h1 {
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+    line-height: 1.6em;
+    padding-top: 30px;
+}
+
+
+.main {
+    float: left;
+    box-sizing: border-box;
+    width: 70%;
+    padding: 0 30px;
+}
+
+.sidebar {
+    float: right;
+    box-sizing: border-box;
+    width: 30%;
+    padding: 10px;
+    background-color: rgb(240, 95, 174) ;
+    
+    color: #fff;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+
+.sidebar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 2px;
+    margin: 2px;
+}
+
+.sidebar li:nth-child(even) {
+    background: rgb(250, 166, 212);
+}
+
+.sidebar h1:hover {
+    color: black;
+}
+
+.sidebar li:hover {
+    color: black;
+    background-color: rgb(252, 198, 227);
+}
+
+footer {
+    background: #fd4eb4;
+    color: #fff;
+    padding: 20px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.movie {
+    margin-top: 20px;
+}
+.movie h2 {
+    border-bottom: rgb(235, 63, 157) solid;
+}
+.movie h2:hover {
+    border-bottom: rgb(240, 20, 141) solid;
+    color: black;
+}
+
+.main-item {
+    background-image: rgb(102, 100, 100);
+    padding: 10px;
+   
+}
+
+.item {
+    float: left;
+    width: 30%;
+    padding: 5px;
+    margin: 5px;
+    box-sizing: border-box;
+    border:2px solid rgb(250, 146, 210);
+    box-sizing: border-box;
+    border-radius: 7px;
+}
+
+.item img {
+    width: 100%;
+   
+  }
+
+.item:hover {
+    border: 2px solid rgb(248, 54, 167);
+    border-radius: 7px;
+   
+}
+
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+    color: #fff;
+  }
+
+.album {
+    margin-top: 20px;
+}
+.album h2 {
+    border-bottom: rgb(235, 63, 157) solid;
+}
+
+.album h2:hover {
+    border-bottom: rgb(240, 20, 141) solid;
+    color: black;
+}
+
+.main-gallary {
+
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+
+.gallary img {
+    width: 100%;
+}
+
+
+.gallary {
+    flex-basis: 30%;
+
+}
+
+
+  @media (max-width:600px) {
+
+    .item {
+        float: left;
+        width: 100%;
+        padding: 5px;
+        margin: 5px;
+        box-sizing: border-box;
+        border:2px solid rgb(250, 146, 210);
+        box-sizing: border-box;
+        border-radius: 7px;
+    }
+  
+
+    .main {
+        width: 100%;
+        float:none;
+    }
+    .sidebar {
+        width: 100%;
+        float:none;
+    }
+
+    .showCase {
+        background-image: url(./img/gallary1/img\ \(12\).jpg);
+        background-position: center ;
+        background-size: 500px;
+        background-repeat: no-repeat;
+     
+        
+        min-height: 300px ;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .showCase h1 {
+        color: rgb(0, 0, 0);
+        font-size: 30px;
+        line-height: 1.6em;
+        padding-top: 30px;
+    }
+
+
+}
