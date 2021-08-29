@@ -40,14 +40,13 @@
         </section>
         <aside class="sidebar">
             <h1>Catagory</h1>
-            <ul>
+            <ul id="catUL">
                 <li>2011 Album</li>
                 <li>2010 Album</li>
                 <li>2009 Album</li>
-                <li>2008 Album</li>
-               
-                <button> More </button>
+                <li>2008 Album</li> 
             </ul>
+            <button id="catagory-more" onclick="catMore()"> More </button>
         </aside>
     </div>
 
@@ -71,6 +70,10 @@
                 <img id="img" src="img/gallary2/movie (3).jpg" alt="">
                 <div class="desc">Add a description of the image here</div>
             </div>
+            <div class="item">
+                <img id="img" src="img/gallary2/movie (4).jpg" alt="">
+                <div class="desc">Add a description of the image here</div>
+            </div>
             
 
         </section>
@@ -89,7 +92,9 @@
 
         </section>
 
-        <button id="addAlbum" onclick="addAlbum()">More Photo</button>
+        <button id="addalbum" onclick="addAlbum()" style="display:block">More Photo</button>
+        <button id="lessalbum" onclick="lessAlbum()" style="display: none;">Less Photo</button>
+     
 
         <script src="/girlfriend-album/javascript.js">
              
@@ -98,7 +103,7 @@
     </div>
     <div class="clear"></div>
 
-
+   
 
   
     <footer>

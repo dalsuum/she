@@ -154,19 +154,19 @@ footer {
 
 .main-item {
     background-image: rgb(207, 71, 71);
-    padding: 10px;
+    padding: 0px;
    
 }
 
 .item {
     float: left;
-    width: 30%;
-    padding: 5px;
-    margin: 5px;
+    width: 23%;
+    padding: 3px;
+    margin-left: 7px;
     box-sizing: border-box;
-    border:2px solid rgb(250, 146, 210);
+    border:1px solid rgb(250, 146, 210);
     box-sizing: border-box;
-    border-radius: 7px;
+    border-radius: 5px;
 }
 
 .item img {
@@ -175,8 +175,8 @@ footer {
   }
 
 .item:hover {
-    border: 2px solid rgb(248, 54, 167);
-    border-radius: 7px;
+    border: 1px solid rgb(248, 54, 167);
+    border-radius: 5px;
    
 }
 
@@ -216,7 +216,7 @@ div.desc {
 
 }
 
-#addAlbum {
+#addalbum, #lessalbum {
     bottom: 0;
     left: 40%;
     position: relative;
