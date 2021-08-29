@@ -10,6 +10,7 @@ body {
     margin:auto;
     overflow: hidden;
     
+    
 }
 
 button {
@@ -71,7 +72,7 @@ nav li a:hover {
 
 .showCase {
     background-image: url(./img/gallary1/img\ \(12\).jpg);
-    background-position: center left ;
+    background-position: center left;
     
 
     min-height: 300px ;
@@ -152,7 +153,7 @@ footer {
 }
 
 .main-item {
-    background-image: rgb(102, 100, 100);
+    background-image: rgb(207, 71, 71);
     padding: 10px;
    
 }
@@ -186,33 +187,39 @@ div.desc {
     color: #fff;
   }
 
-.album {
+#album {
     margin-top: 20px;
 }
-.album h2 {
+#album h2 {
     border-bottom: rgb(235, 63, 157) solid;
 }
 
-.album h2:hover {
+#album h2:hover {
     border-bottom: rgb(240, 20, 141) solid;
     color: black;
 }
 
-.main-gallary {
+#main-album {
 
     display: flex;
     flex-wrap:wrap;
     justify-content: center;
 }
 
-.gallary img {
+#albumphoto img {
     width: 100%;
 }
 
 
-.gallary {
-    flex-basis: 30%;
+#albumphoto {
+    flex-basis: 20%;
 
+}
+
+#addAlbum {
+    bottom: 0;
+    left: 40%;
+    position: relative;
 }
 
 
