@@ -22,6 +22,7 @@
       
     let mainDiv = document.getElementById("main-album")
     let newDiv = document.createElement("div")
+    let newA = document.createElement("a")
     let newImg = document.createElement("img")
     let showmorebtn = document.getElementById("addalbum")
     let showlessbtn = document.getElementById("lessalbum")
@@ -31,7 +32,9 @@
         newDiv.setAttribute("id", "albumphoto")
         newImg.setAttribute("id", "myimg");
         newImg.setAttribute("src", "img/gallary2/up (" + myload + ").jpg");
-        newDiv.appendChild(newImg)
+        newA.setAttribute("href", "img/gallary2/up (" + myload + ").jpg");
+        newA.appendChild(newImg)
+        newDiv.appendChild(newA)
         mainDiv.appendChild(newDiv)
       } else {
         showmorebtn.style.display = "none"
