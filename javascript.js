@@ -13,7 +13,6 @@
         if( load == loading) { 
           photoRow = 0 
           loading +=5  
-          
         }    
         createAlbum()
       } 
@@ -41,58 +40,57 @@
     }   
 
     function addAlbum() {
+     
       photoRow = 5
+      int = setInterval(countNum, 30)
+     
     }
-
-
     // let myint = setInterval(lessAlbum, 30)
-
     function lessAlbum() {
       if(load > 0 ) {
         load-- 
-       
         }    
-        removeAlbum()
-      
-      } 
+        removeAlbum()}
+     
     
-   
-
       function removeAlbum(){
-
         let mainDiv = document.getElementById("main-album")
+        let multiDiv = document.getElementById("albumphoto")
         let showmorebtn = document.getElementById("addalbum")
         let showlessbtn = document.getElementById("lessalbum")
-      
        
-        let myload = `${load}`
-
-        if  (myload > 5) {
-
-          multiDiv = mainDiv.lastChild
-         
-          mainDiv.removeChild(multiDiv);
-           
-                      
-          }else{
+        if  (mainDiv.childElementCount > 5) {
+        
+          mainDiv.removeChild(mainDiv.lastChild);
+          mainDiv.removeChild(mainDiv.lastChild);
+          mainDiv.removeChild(mainDiv.lastChild);
+          mainDiv.removeChild(mainDiv.lastChild);
+          
+      
+          }else{ 
+            
             showmorebtn.style.display = "block"
             showlessbtn.style.display = "none"
-          }
+           
+           
+            }
         }   
 
 function catMore() {
   let albumYears = ["2010 Album", "2020 Album", "2021 Album"]
   let ul = document.getElementById("catUL")
-  
-  albumYears.map(albumYear => {
-   
-    let li = document.createElement("li")
-    li.textContent = albumYear
-    ul.appendChild(li)
-  }) 
 
+        albumYears.forEach(albumYear => {
+        let li = document.createElement("li")
+        li.textContent = albumYear
+        ul.appendChild(li)
+      })
+
+   
 }
        
+
+document.getElementById("myImg")
 
 
     
