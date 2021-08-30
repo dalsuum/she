@@ -13,15 +13,15 @@
         if( load == loading) { 
           photoRow = 0 
           loading +=5  
-          console.log("this is smallload",load)
-          console.log("This is loading", loading)
+          // console.log("this is smallload",load)
+          // console.log("This is loading", loading)
           clearInterval(int)
         }    
         createAlbum()
         
       } 
 
-      console.log("This is main load", load)
+      // console.log("This is main load", load)
   }
 
   function createAlbum(){
@@ -52,7 +52,7 @@
     }   
 
     function addAlbum() {
-      console.log("This is addAlbum",photoRow)
+      // console.log("This is addAlbum",photoRow)
       photoRow = 5
       clearInterval(int)
       int = setInterval(countNum, 30)
@@ -74,7 +74,7 @@
         mainDiv.removeChild(mainDiv.lastChild);
         mainDiv.removeChild(mainDiv.lastChild);
         mainDiv.removeChild(mainDiv.lastChild);
-        console.log("This is childCount load",load)
+        // console.log("This is childCount load",load)
         load = 0
       
 
@@ -83,7 +83,7 @@
       }else{
           showmorebtn.style.display = "block"
           showlessbtn.style.display = "none"
-          console.log("This is else load",load)
+          // console.log("This is else load",load)
          
         }  
         
