@@ -13,9 +13,15 @@
         if( load == loading) { 
           photoRow = 0 
           loading +=5  
+          console.log("this is smallload",load)
+          console.log("This is loading", loading)
+          clearInterval(int)
         }    
         createAlbum()
+        
       } 
+
+      console.log("This is main load", load)
   }
 
   function createAlbum(){
@@ -29,6 +35,7 @@
     let myload = `${load}`
 
     if ( myload < total) {
+      
         newDiv.setAttribute("id", "albumphoto")
         newImg.setAttribute("id", "myimg");
         newImg.setAttribute("src", "img/gallary2/up (" + myload + ").jpg");
@@ -36,6 +43,8 @@
         newA.appendChild(newImg)
         newDiv.appendChild(newA)
         mainDiv.appendChild(newDiv)
+
+        
       } else {
         showmorebtn.style.display = "none"
         showlessbtn.style.display = "block"
@@ -43,41 +52,42 @@
     }   
 
     function addAlbum() {
-     
+      console.log("This is addAlbum",photoRow)
       photoRow = 5
+      clearInterval(int)
       int = setInterval(countNum, 30)
-     
     }
     // let myint = setInterval(lessAlbum, 30)
     function lessAlbum() {
-      if(load > 0 ) {
-        load-- 
-        }    
-        removeAlbum()}
-     
-    
-      function removeAlbum(){
-        let mainDiv = document.getElementById("main-album")
-        let multiDiv = document.getElementById("albumphoto")
-        let showmorebtn = document.getElementById("addalbum")
-        let showlessbtn = document.getElementById("lessalbum")
-       
-        if  (mainDiv.childElementCount > 5) {
-        
-          mainDiv.removeChild(mainDiv.lastChild);
-          mainDiv.removeChild(mainDiv.lastChild);
-          mainDiv.removeChild(mainDiv.lastChild);
-          mainDiv.removeChild(mainDiv.lastChild);
-          
+        // if(total > load ) {
+        //    total--
+        //    console.log("this is load",load)
+        //    console.log("this is total",total)
+        //    }    
+   
+      let mainDiv = document.getElementById("main-album")
+      let multiDiv = document.getElementById("albumphoto")
+      let showmorebtn = document.getElementById("addalbum")
+      let showlessbtn = document.getElementById("lessalbum")
       
-          }else{ 
-            
-            showmorebtn.style.display = "block"
-            showlessbtn.style.display = "none"
-           
-           
-            }
-        }   
+      if  (mainDiv.childElementCount > 5) {
+        mainDiv.removeChild(mainDiv.lastChild);
+        mainDiv.removeChild(mainDiv.lastChild);
+        mainDiv.removeChild(mainDiv.lastChild);
+        console.log("This is childCount load",load)
+        load = 0
+      
+
+        console.log("This is ChildCount",mainDiv.childElementCount)
+      
+      }else{
+          showmorebtn.style.display = "block"
+          showlessbtn.style.display = "none"
+          console.log("This is else load",load)
+         
+        }  
+        
+      }
 
 function catMore() {
   let albumYears = ["2010 Album", "2020 Album", "2021 Album"]
