@@ -20,7 +20,7 @@
                     <a href="#">Contact Me</a>
                 </li>
                 <li>
-                    <a href="#">About Me</a>
+                    <a href="https://www.imdb.com/name/nm2605345/bio?ref_=nm_ov_bio_sm">About Me</a>
                 </li>
             </ul>
         </div>
@@ -28,25 +28,40 @@
 
     <div class="container">
         <div class="showCase">
-            <h1>She is the best person in my life!</h1>
+            <h1>Gemma Arterton</h1>
+            
         </div>
     </div>
   
     <div class="container">
         <section class="main">
-                <h1>She</h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum incidunt possimus nesciunt. Cupiditate, fuga. Facilis commodi odit laboriosam eaque perspiciatis ab. Laboriosam quia cumque neque ipsa repellendus voluptatum tenetur exercitationem.</p>
-            
+                <h1>Gemma Arterton</h1>
+                <h5>Born: February 2, 1986 in Gravesend, Kent, England, UK</h5>
+                <h4>Biography</h4>
+                <p id="bio1">Gemma Christina Arterton was born in Gravesend, Kent, England, where she was raised. She is the daughter of Sally-Anne (Heap), a cleaner, and Barry J. Arterton, a welder. Her mother's cousin is singer-songwriter Eric Goulden.
+                </p>
+                <p id="bio2" style="display: none;">
+                    Her parents divorced when she was age five, and Gemma subsequently lived with her younger sister and her mother. Her parents encouraged their children to explore their creative abilities. Gemma's sister, Hannah, liked to sing, whereas Gemma chose acting. During her teenage years, she was part of the Masquerade and Miskin theater companies, appearing in productions of The Massacre of Civitella and Guiding Star. In 2004, she won an award for Best Supporting Actress, which helped her to win a grant to study at the Royal Academy of Dramatic Art (RADA).
+                </p>
+                <p id="bio3" style="display: none;">    
+                    Whilst studying at RADA, she landed her first professional role in Capturing Mary (2007), directed by Stephen Poliakoff and starring Maggie Smith. Gemma graduated from RADA in 2007 and won her first film role in St. Trinian's (2007). Her breakthrough role came in 2008, when she appeared in the James Bond film Quantum of Solace (2008). In 2009, she was the winner of Empire's Best Newcomer Award.
+                    - Biography By: Kad
+                </p>
+               
+                
+                <button id="bioBtn1" onclick="bioMore()" style="display: block;">Read More</button>
+                <button id="bioBtn2" onclick="bioLess()" style="display: none;">Read Less</button>
         </section>
         <aside class="sidebar">
             <h1>Catagory</h1>
             <ul id="catUL">
-                <li>2011 Album</li>
-                <li>2010 Album</li>
-                <li>2009 Album</li>
-                <li>2008 Album</li> 
+                <li>2021 Album</li>
+                <li>2020 Album</li>
+                <li>2019 Album</li>
+                <li>2018 Album</li> 
             </ul>
-            <button id="catagory-more" onclick="catMore()"> More </button>
+            <button id="catBtn" onclick="catMore()"> More </button>
+            
         </aside>
     </div>
 
@@ -59,20 +74,28 @@
         <section class="main-item">
             
             <div class="item">
-                <img id="img" src="img/gallary2/movie (1).jpg" alt="">
-                <div class="desc">Add a description of the image here</div>
+                <a href="https://www.imdb.com/title/tt6841122/">
+                <img class="itemImg" src="img/gallary2/movie (1).jpg" alt="">
+                <div class="desc">"Summerland"</div>
+                </a>
             </div>
             <div class="item">
-                <img id="img" src="img/gallary2/movie (2).jpg" alt="">
-                <div class="desc">Add a description of the image here</div>
+                <a href="https://www.imdb.com/title/tt1661275/?ref_=fn_al_tt_1">
+                <img class="itemImg" src="img/gallary2/movie (2).jpg" alt="">
+                <div class="desc">"Their Finest"</div>
+                </a>
             </div>
             <div class="item">
-                <img id="img" src="img/gallary2/movie (3).jpg" alt="">
-                <div class="desc">Add a description of the image here</div>
+                <a href="https://www.imdb.com/title/tt0473075/?ref_=nv_sr_srsg_6">
+                <img class="itemImg" src="img/gallary2/movie (3).jpg" alt="">
+                <div class="desc">Prince of Persia: The Sands of Time</div>
+                </a>
             </div>
             <div class="item">
-                <img id="img" src="img/gallary2/movie (4).jpg" alt="">
-                <div class="desc">Add a description of the image here</div>
+                <a href="https://www.imdb.com/title/tt1428538/?ref_=nv_sr_srsg_7">
+                <img class="itemImg" src="img/gallary2/movie (4).jpg" alt="">
+                <div class="desc">Hansel & Gretel: Witch Hunters</div>
+                </a>
             </div>
             
 
@@ -82,7 +105,7 @@
        
         <div id="album">
             <h2>
-                She's Album
+                Her Album
             </h2>
         </div>
         <section id="main-album">
@@ -90,8 +113,7 @@
         
         <button id="addalbum" onclick="addAlbum()" style="display:block">More Photo</button>
         <button id="lessalbum" onclick="lessAlbum()" style="display: none;">Less Photo</button>
-        <script src="javascript.js">
-        </script>
+       
     </div>
     <div class="clear"></div>
     <footer>
@@ -101,5 +123,8 @@
             </p>
         </div>
     </footer>
+    <!-- Javascript file link -->
+    <script src="javascript.js">
+    </script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+/* global css  */
 body {
     background-image: linear-gradient(#f767a3, rgb(218, 136, 238));
     color: #555;
@@ -9,8 +10,6 @@ body {
     width: 80%;
     margin:auto;
     overflow: hidden;
-    
-    
 }
 
 button {
@@ -20,12 +19,19 @@ button {
     border: none;
     padding: 10px 15px;
     margin: 2px;
+    
 }
 
 button:hover {
     background-color: rgb(245, 112, 185);
     color:black;
+    cursor: pointer;
 }
+a {
+    text-decoration: none;
+}
+
+/* custom css */
 
 #clear {
     clear: both;
@@ -38,6 +44,8 @@ header h1 {
 header h1:hover {
     color: black;
 }
+
+/* navigation block */
 
 nav {
     background-image: linear-gradient(to left, #f5277d, #ffa7da);
@@ -70,6 +78,8 @@ nav li a:hover {
     color: rgb(0, 0, 0);
 }
 
+/* Show Cover Block */
+
 .showCase {
     background-image: url(./img/gallary1/img\ \(12\).jpg);
     background-position: center left;
@@ -87,6 +97,7 @@ nav li a:hover {
     padding-top: 30px;
 }
 
+/* contect block */
 
 .main {
     float: left;
@@ -131,15 +142,12 @@ nav li a:hover {
 .sidebar li:hover {
     color: black;
     background-color: rgb(252, 198, 227);
+    cursor: pointer;
 }
 
-footer {
-    background: #fd4eb4;
-    color: #fff;
-    padding: 20px;
-    margin-top: 40px;
-    text-align: center;
-}
+
+
+/* movie block  */
 
 .movie {
     margin-top: 20px;
@@ -169,15 +177,22 @@ footer {
     border-radius: 5px;
 }
 
-.item img {
+.itemImg {
     width: 100%;
+
    
   }
 
 .item:hover {
     border: 1px solid rgb(248, 54, 167);
     border-radius: 5px;
+    cursor: pointer;
    
+   
+}
+
+.item a {
+    text-decoration: none;
 }
 
 
@@ -187,11 +202,13 @@ div.desc {
     color: #fff;
   }
 
+/* album block */
+
 #album {
     margin-top: 20px;
 }
 #album h2 {
-    border-bottom: rgb(235, 63, 157) solid;
+    border-bottom: rgb(255, 56, 165) solid;
 }
 
 #album h2:hover {
@@ -208,18 +225,41 @@ div.desc {
 
 #albumphoto img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 
 #albumphoto {
-    flex-basis: 20%;
+   
+    flex-basis: 17%;
+    padding: 2px;
+    border: 1px solid rgb(248, 127, 212);
+
+}
+
+#albumphoto:hover {
+    flex-basis: 17%;
+    padding: 2px;
+    border: 1px solid rgb(243, 85, 177);
+
 
 }
 
 #addalbum, #lessalbum {
     bottom: 0;
-    left: 40%;
+    left: 45%;
     position: relative;
+}
+
+/* footer block */
+
+footer {
+    background: #fd4eb4;
+    color: #fff;
+    padding: 20px;
+    margin-top: 40px;
+    text-align: center;
 }
 
 
