@@ -9,23 +9,19 @@
   function countNum(){  
     if(photoRow == 5 ) {
         load++ 
-       
-        if( load == loading) { 
-          photoRow = 0 
-          loading +=5  
-          // console.log("this is smallload",load)
-          // console.log("This is loading", loading)
-          clearInterval(int)
-        }    
-        createAlbum()
-        
+          if( load == loading) { 
+            photoRow = 0 
+            loading +=5  
+            // console.log("this is smallload",load)
+            // console.log("This is loading", loading)
+            clearInterval(int)
+          }    
+        createAlbum() 
+        // console.log("This is main photoRow",photoRow)
       } 
-
       // console.log("This is main load", load)
   }
-
   function createAlbum(){
-      
     let mainDiv = document.getElementById("main-album")
     let newDiv = document.createElement("div")
     let newA = document.createElement("a")
@@ -33,7 +29,6 @@
     let showmorebtn = document.getElementById("addalbum")
     let showlessbtn = document.getElementById("lessalbum")
     let myload = `${load}`
-
     if ( myload < total) {
       
         newDiv.setAttribute("id", "albumphoto")
@@ -52,18 +47,16 @@
     }   
 
     function addAlbum() {
-      // console.log("This is addAlbum",photoRow)
+      // console.log("This is addAlbum phrow",photoRow)
       photoRow = 5
+          
       clearInterval(int)
       int = setInterval(countNum, 30)
+      // console.log("This is addAlbum load", load)
     }
-    // let myint = setInterval(lessAlbum, 30)
+   
+   
     function lessAlbum() {
-        // if(total > load ) {
-        //    total--
-        //    console.log("this is load",load)
-        //    console.log("this is total",total)
-        //    }    
    
       let mainDiv = document.getElementById("main-album")
       let multiDiv = document.getElementById("albumphoto")
@@ -71,20 +64,26 @@
       let showlessbtn = document.getElementById("lessalbum")
       
       if  (mainDiv.childElementCount > 5) {
+          
+       
         mainDiv.removeChild(mainDiv.lastChild);
         mainDiv.removeChild(mainDiv.lastChild);
         mainDiv.removeChild(mainDiv.lastChild);
-        // console.log("This is childCount load",load)
-        load = 0
-      
-
-        console.log("This is ChildCount",mainDiv.childElementCount)
+        // mainDiv.removeChild(mainDiv.lastChild);
+        // mainDiv.removeChild(mainDiv.lastChild);
+        // load = 0
+        // console.log("This is child load", load)
+        clearInterval(int)
+        //  console.log("This is ChildCount",mainDiv.childElementCount)
       
       }else{
+          load = 4
+          loading = 5
+
           showmorebtn.style.display = "block"
           showlessbtn.style.display = "none"
           // console.log("This is else load",load)
-         
+          // console.log("This is else loading",loading)
         }  
         
       }
@@ -103,7 +102,7 @@ function catMore() {
 }
        
 
-document.getElementById("myImg")
+
 
 
     
