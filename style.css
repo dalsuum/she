@@ -115,6 +115,7 @@ nav li a:hover {
     float: left;
     box-sizing: border-box;
     width: 70%;
+    height: 450px;
     padding: 0 30px;
 }
 
