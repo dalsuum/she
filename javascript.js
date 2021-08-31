@@ -18,8 +18,8 @@
     myload = `${i}`;
    
           
-    newDiv.setAttribute("id", "albumphoto")
-    newImg.setAttribute("id", "myimg");
+    newDiv.setAttribute("id", "album-item")
+    newImg.setAttribute("id", "album-photo");
     //console.log("this is my load jpg", myload)
     newImg.setAttribute("src", "img/gallary2/up (" + myload + ").jpg");
     newA.setAttribute("href", "img/gallary2/up (" + myload + ").jpg");
@@ -61,8 +61,8 @@
     if ( myload <= total) {
       
           
-        newDiv.setAttribute("id", "albumphoto")
-        newImg.setAttribute("id", "myimg");
+        newDiv.setAttribute("id", "album-item")
+        newImg.setAttribute("id", "album-photo");
         //console.log("this is my load jpg", myload)
         newImg.setAttribute("src", "img/gallary2/up (" + myload + ").jpg");
         newA.setAttribute("href", "img/gallary2/up (" + myload + ").jpg");
@@ -86,7 +86,7 @@
    
     function lessAlbum() {
       let mainDiv = document.getElementById("main-album")
-      let multiDiv = document.getElementById("albumphoto")
+      let multiDiv = document.getElementById("album-item")
       let showmorebtn = document.getElementById("addalbum")
       let showlessbtn = document.getElementById("lessalbum")
       

@@ -33,19 +33,21 @@
     </div>
   
     <div class="container">
-        <section class="main">
+        <section class="main-bio">
                 <h1>Gemma Arterton</h1>
-                <h5>Born: February 2, 1986 in Gravesend, Kent, England, UK</h5>
-                <h4>Biography</h4>
-                <p id="bio1">Gemma Christina Arterton was born in Gravesend, Kent, England, where she was raised. She is the daughter of Sally-Anne (Heap), a cleaner, and Barry J. Arterton, a welder. Her mother's cousin is singer-songwriter Eric Goulden.
-                </p>
-                <p id="bio2" style="display: none;">
-                    Her parents divorced when she was age five, and Gemma subsequently lived with her younger sister and her mother. Her parents encouraged their children to explore their creative abilities. Gemma's sister, Hannah, liked to sing, whereas Gemma chose acting. During her teenage years, she was part of the Masquerade and Miskin theater companies, appearing in productions of The Massacre of Civitella and Guiding Star. In 2004, she won an award for Best Supporting Actress, which helped her to win a grant to study at the Royal Academy of Dramatic Art (RADA).
-                </p>
-                <p id="bio3" style="display: none;">    
-                    Whilst studying at RADA, she landed her first professional role in Capturing Mary (2007), directed by Stephen Poliakoff and starring Maggie Smith. Gemma graduated from RADA in 2007 and won her first film role in St. Trinian's (2007). Her breakthrough role came in 2008, when she appeared in the James Bond film Quantum of Solace (2008). In 2009, she was the winner of Empire's Best Newcomer Award.
-                    - Biography By: Kad
-                </p>
+                <div>
+                    <h5>Born: February 2, 1986 in Gravesend, Kent, England, UK</h5>
+                    <h4>Biography</h4>
+                    <p id="bio1">Gemma Christina Arterton was born in Gravesend, Kent, England, where she was raised. She is the daughter of Sally-Anne (Heap), a cleaner, and Barry J. Arterton, a welder. Her mother's cousin is singer-songwriter Eric Goulden.
+                    </p>
+                    <p id="bio2" style="display: none;">
+                        Her parents divorced when she was age five, and Gemma subsequently lived with her younger sister and her mother. Her parents encouraged their children to explore their creative abilities. Gemma's sister, Hannah, liked to sing, whereas Gemma chose acting. During her teenage years, she was part of the Masquerade and Miskin theater companies, appearing in productions of The Massacre of Civitella and Guiding Star. In 2004, she won an award for Best Supporting Actress, which helped her to win a grant to study at the Royal Academy of Dramatic Art (RADA).
+                    </p>
+                    <p id="bio3" style="display: none;">    
+                        Whilst studying at RADA, she landed her first professional role in Capturing Mary (2007), directed by Stephen Poliakoff and starring Maggie Smith. Gemma graduated from RADA in 2007 and won her first film role in St. Trinian's (2007). Her breakthrough role came in 2008, when she appeared in the James Bond film Quantum of Solace (2008). In 2009, she was the winner of Empire's Best Newcomer Award.
+                        - Biography By: Kad
+                    </p>
+                </div>
                
                 
                 <button id="bioBtn1" onclick="bioMore()" style="display: block;">Read More</button>
@@ -53,12 +55,14 @@
         </section>
         <aside class="sidebar">
             <h1>Catagory</h1>
-            <ul id="catUL">
-                <li>2021 Album</li>
-                <li>2020 Album</li>
-                <li>2019 Album</li>
-                <li>2018 Album</li> 
-            </ul>
+            <div>
+                <ul id="catUL">
+                    <li>2021 Album</li>
+                    <li>2020 Album</li>
+                    <li>2019 Album</li>
+                    <li>2018 Album</li> 
+                </ul>
+            </div>
             <button id="catBtn1" onclick="catMore()" style="display: block;"> More </button>
             <button id="catBtn2" onclick="catLess()" style="display: none;"> Less </button>
             
@@ -67,36 +71,36 @@
 
     <div class="clear"></div>
     <div class="container">
-        <div class="movie">
+        <div class="movieTitle">
             <h2>Movie</h2>
         
         </div>
-        <section class="main-item">
+        <section class="main-movie">
             
-            <div class="item">
+            <div class="movie-item">
                 <a target="_blank" href="https://www.imdb.com/title/tt6841122/">
-                <img class="itemImg" src="img/gallary2/movie (1).jpg" alt="">
+                <img class="movie-photo" src="img/gallary2/movie (1).jpg" alt="">
                 <div class="desc"><p>"Summerland"</p></div>
                 </a>
             </div>
-            <div class="item">
+            <div class="movie-item">
                 <a target="_blank" href="https://www.imdb.com/title/tt1661275/?ref_=fn_al_tt_1">
-                <img class="itemImg" src="img/gallary2/movie (2).jpg" alt="">
+                <img class="movie-photo" src="img/gallary2/movie (2).jpg" alt="">
                 <div class="desc"><p>"Their Finest"</p></div>
                 </a>
             </div>
-            <div class="item">
+            <div class="movie-item">
                 <a target="_blank" href="https://www.imdb.com/title/tt0473075/?ref_=nv_sr_srsg_6">
-                <img class="itemImg" src="img/gallary2/movie (3).jpg" alt="">
+                <img class="movie-photo" src="img/gallary2/movie (3).jpg" alt="">
                 <div class="desc"> 
                     <p>Prince of Persia:</p>
                     <p>The Sands of Time</p>
                 </div>
                 </a>
             </div>
-            <div class="item">
+            <div class="movie-item">
                 <a target="_blank" href="https://www.imdb.com/title/tt1428538/?ref_=nv_sr_srsg_7">
-                <img class="itemImg" src="img/gallary2/movie (4).jpg" alt="">
+                <img class="movie-photo" src="img/gallary2/movie (4).jpg" alt="">
                 <div class="desc">
                     <p>Hansel & Gretel:</p>
                     <p>Witch Hunters</p>
@@ -109,17 +113,18 @@
     </div>
     <div class="container">
        
-        <div id="album">
+        <div id="album-title">
             <h2>
                 Her Album
             </h2>
         </div>
         <section id="main-album">
+
+            
         </section>
-        
-        <button id="addalbum" onclick="addAlbum()" style="display:block">More Photo</button>
-        <button id="lessalbum" onclick="lessAlbum()" style="display: none;">Less Photo</button>
-       
+      
+            <button id="addalbum" onclick="addAlbum()" style="display:block">More Photo</button>
+            <button id="lessalbum" onclick="lessAlbum()" style="display: none;">Less Photo</button>
     </div>
     <div class="clear"></div>
     <footer>
