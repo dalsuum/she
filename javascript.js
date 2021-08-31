@@ -1,23 +1,13 @@
-
- 
   
-  let photoRow = 5
-  let load = 5
-  let loading = 10
-  let total = 21
 
-  let int = setInterval(countNum, 30)
 
   for ( let i = 1 ; i <6; i ++ ) {
     let mainDiv = document.getElementById("main-album")
     let newDiv = document.createElement("div")
     let newA = document.createElement("a")
     let newImg = document.createElement("img")
-
     //console.log("This is for loop", i)
     myload = `${i}`;
-   
-          
     newDiv.setAttribute("id", "album-item")
     newImg.setAttribute("id", "album-photo");
     //console.log("this is my load jpg", myload)
@@ -29,10 +19,27 @@
     mainDiv.appendChild(newDiv)
 
   }
+  let photoRow = 5
+  let load = 5
+  let loading = 10
+  let total = 21
 
+  let int = setInterval(countNum, 30)
+  clearInterval(int)
 
+  let photoRow1 = false
+  function addAlbum() {
+    // console.log("This is addAlbum phrow",photoRow)
+    photoRow1 = true
+    clearInterval(int)
+    int = setInterval(countNum, 30)
+    //console.log("This is addAlbum load", load)
+  }
+
+  
   function countNum(){  
-    if(photoRow = 5) {
+
+    if(photoRow1 == true) {
         load += 1
           if( load == loading) { 
             //console.log("this is smallload",load)
@@ -59,8 +66,7 @@
     //console.log("this is my load", myload)
     //console.log("this is total", total)
     if ( myload <= total) {
-      
-          
+           
         newDiv.setAttribute("id", "album-item")
         newImg.setAttribute("id", "album-photo");
         //console.log("this is my load jpg", myload)
@@ -75,16 +81,7 @@
         showlessbtn.style.display = "block"
       }
     }   
-
-    function addAlbum() {
-      // console.log("This is addAlbum phrow",photoRow)
-      photoRow = 5
-      clearInterval(int)
-      int = setInterval(countNum, 30)
-      // console.log("This is addAlbum load", load)
-    }
-   
-    function lessAlbum() {
+  function lessAlbum() {
       let mainDiv = document.getElementById("main-album")
       let multiDiv = document.getElementById("album-item")
       let showmorebtn = document.getElementById("addalbum")
@@ -101,7 +98,7 @@
         // console.log("This is child load", load)
         //clearInterval(int)
        
-        console.log("This is MainDivChildCount",mainDiv.childElementCount)
+        //console.log("This is MainDivChildCount",mainDiv.childElementCount)
       
       }else{
           showlessbtn.style.display = "none"
@@ -116,7 +113,6 @@
           //  mainDiv.removeChild(mainDiv.lastChild);
           //  mainDiv.removeChild(mainDiv.lastChild);
           //  mainDiv.removeChild(mainDiv.lastChild);
-          
         }  
       }
 
