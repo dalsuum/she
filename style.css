@@ -27,8 +27,6 @@ button {
     
 }
 
-
-
 button:hover {
     background-color: rgb(245, 112, 185);
     color:black;
@@ -130,6 +128,7 @@ nav li a:hover {
     color: #fff;
     border-radius: 10px;
     text-align: center;
+    margin-top: 10px;
 }
 
 
