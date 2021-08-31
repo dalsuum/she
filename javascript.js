@@ -1,10 +1,34 @@
 
+ 
+  
   let photoRow = 5
-  let load = 0
-  let loading = 5
+  let load = 5
+  let loading = 10
   let total = 21
 
   let int = setInterval(countNum, 30)
+
+  for ( let i = 1 ; i <6; i ++ ) {
+    let mainDiv = document.getElementById("main-album")
+    let newDiv = document.createElement("div")
+    let newA = document.createElement("a")
+    let newImg = document.createElement("img")
+
+    //console.log("This is for loop", i)
+    myload = `${i}`;
+   
+          
+    newDiv.setAttribute("id", "albumphoto")
+    newImg.setAttribute("id", "myimg");
+    //console.log("this is my load jpg", myload)
+    newImg.setAttribute("src", "img/gallary2/up (" + myload + ").jpg");
+    newA.setAttribute("href", "img/gallary2/up (" + myload + ").jpg");
+    newA.appendChild(newImg)
+    newDiv.appendChild(newA)
+    mainDiv.appendChild(newDiv)
+
+  }
+
 
   function countNum(){  
     if(photoRow = 5) {
@@ -12,7 +36,7 @@
           if( load == loading) { 
             //console.log("this is smallload",load)
             photoRow = 0 
-            loading += 5  
+            loading += 4  
             
             //console.log("This is loading", loading)
             clearInterval(int)
@@ -20,7 +44,7 @@
         createAlbum() 
         //console.log("This is main photoRow",photoRow)
       } 
-      console.log("This is main load", load)
+      //console.log("This is main load", load)
   }
   function createAlbum(){
     let mainDiv = document.getElementById("main-album")
@@ -35,6 +59,7 @@
     //console.log("this is total", total)
     if ( myload <= total) {
       
+          
         newDiv.setAttribute("id", "albumphoto")
         newImg.setAttribute("id", "myimg");
         //console.log("this is my load jpg", myload)
@@ -52,23 +77,18 @@
     function addAlbum() {
       // console.log("This is addAlbum phrow",photoRow)
       photoRow = 5
-          
       clearInterval(int)
       int = setInterval(countNum, 30)
       // console.log("This is addAlbum load", load)
     }
    
-   
     function lessAlbum() {
-   
       let mainDiv = document.getElementById("main-album")
       let multiDiv = document.getElementById("albumphoto")
       let showmorebtn = document.getElementById("addalbum")
       let showlessbtn = document.getElementById("lessalbum")
       
       if  (mainDiv.childElementCount > 5 ) {
-          
-       
         mainDiv.removeChild(mainDiv.lastChild);
         mainDiv.removeChild(mainDiv.lastChild);
         mainDiv.removeChild(mainDiv.lastChild);
@@ -77,46 +97,66 @@
         // mainDiv.removeChild(mainDiv.lastChild);
         // load = 0
         // console.log("This is child load", load)
-        clearInterval(int)
-         if (mainDiv.childElementCount == 5) {
-        // showmorebtn.style.display = "block"
-        // showlessbtn.style.display = "none"
-          int = setInterval(countNum, 30)
-         
-         }
-          console.log("This is ChildCount",mainDiv.childElementCount)
+        //clearInterval(int)
+       
+        console.log("This is MainDivChildCount",mainDiv.childElementCount)
       
       }else{
           showlessbtn.style.display = "none"
           showmorebtn.style.display = "block"
           
-          load = 0
-          loading = 5
+          load = 5
+          loading = 10
            //console.log("This is else load",load)
            //console.log("This is else loading",loading)
-           mainDiv.removeChild(mainDiv.lastChild);
-           mainDiv.removeChild(mainDiv.lastChild);
-           mainDiv.removeChild(mainDiv.lastChild);
-           mainDiv.removeChild(mainDiv.lastChild);
-           mainDiv.removeChild(mainDiv.lastChild);
+          //  mainDiv.removeChild(mainDiv.lastChild);
+          //  mainDiv.removeChild(mainDiv.lastChild);
+          //  mainDiv.removeChild(mainDiv.lastChild);
+          //  mainDiv.removeChild(mainDiv.lastChild);
+          //  mainDiv.removeChild(mainDiv.lastChild);
           
         }  
       }
 
 // sider block
 let disableBtn = true
-function catMore() {
-      if (disableBtn) {
-  let albumYears = ["2017 Album", "2016 Album", "2015 Album"]
-  let ul = document.getElementById("catUL")
+let catBtn1 = document.getElementById("catBtn1")
+let catBtn2 = document.getElementById("catBtn2")
+let albumYears = ["2017 Album", "2016 Album", "2015 Album"]
+
+//console.log("This is array", albumYears)
+let ul = document.getElementById("catUL")
+
+ function catMore() {
+      if (disableBtn){
+    //    console.log("This is array", albumYears)
         albumYears.forEach(albumYear => {
-        let li = document.createElement("li")
-        li.textContent = albumYear
-        ul.appendChild(li)
-      })
-      disableBtn = false
-    }
+         let li = document.createElement("li")
+         li.textContent = albumYear
+         ul.appendChild(li)
+        })
+       disableBtn = false
+     } else {
+      catBtn1.style.display = "none"
+      catBtn2.style.display = "block"
+     }
 }
+
+ function catLess() {
+     catArrayTotal = albumYears.length  
+    
+    // console.log("This is ArrayTotal", catArrayTotal) 
+    //console.log("This is ul ChildElementCount", ul.childElementCount)
+     if (ul.childElementCount > 5 ) { 
+  
+         ul.removeChild(ul.lastChild)
+     } else {
+
+         catBtn1.style.display = "block"
+         catBtn2.style.display = "none"
+         disableBtn = true
+     }
+   }
 
 // Main Biography
 

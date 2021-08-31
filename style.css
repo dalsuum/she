@@ -1,4 +1,4 @@
-/* global css  */
+/* global tag of css  */
 body {
     background-image: linear-gradient(#f767a3, rgb(218, 136, 238));
     color: #555;
@@ -20,6 +20,12 @@ button {
     padding: 10px 15px;
     margin: 2px;
     
+}
+
+button {
+    bottom: 0;
+    left: 40%;
+    position: relative;
 }
 
 button:hover {
@@ -44,6 +50,12 @@ header h1 {
 header h1:hover {
     color: black;
 }
+
+/* nav h1 {
+    display: inline;
+    float: left;
+    padding: 0%;
+} */
 
 /* navigation block */
 
@@ -246,11 +258,7 @@ div.desc {
 
 }
 
-#addalbum, #lessalbum {
-    bottom: 0;
-    left: 45%;
-    position: relative;
-}
+
 
 /* footer block */
 
