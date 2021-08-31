@@ -23,6 +23,7 @@
     //console.log("this is my load jpg", myload)
     newImg.setAttribute("src", "img/gallary2/up (" + myload + ").jpg");
     newA.setAttribute("href", "img/gallary2/up (" + myload + ").jpg");
+    newA.setAttribute("target", "_blank");
     newA.appendChild(newImg)
     newDiv.appendChild(newA)
     mainDiv.appendChild(newDiv)
@@ -65,6 +66,7 @@
         //console.log("this is my load jpg", myload)
         newImg.setAttribute("src", "img/gallary2/up (" + myload + ").jpg");
         newA.setAttribute("href", "img/gallary2/up (" + myload + ").jpg");
+        newA.setAttribute("target", "_blank");
         newA.appendChild(newImg)
         newDiv.appendChild(newA)
         mainDiv.appendChild(newDiv)
